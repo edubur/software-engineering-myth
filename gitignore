@@ -1,0 +1,34 @@
+# Ignoriere macOS spezifische Dateien
+.DS_Store
+
+# Ignoriere Windows spezifische Dateien
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignoriere Editor/IDE spezifische Dateien
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Ignoriere temporäre Dateien
+*.tmp
+*~
+
+# Ignoriere npm/yarn Abhängigkeiten (falls später JavaScript hinzugefügt wird)
+/node_modules
+
+# Ignoriere generierte Dateien, falls vorhanden (z.B. Sass-Kompilierungsausgabe)
+/css/*.map
+/dist/
+
+# Ignoriere Log-Dateien
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignoriere alle Dateien im 'uploads' Ordner, falls Bilder hochgeladen werden
+/uploads/
