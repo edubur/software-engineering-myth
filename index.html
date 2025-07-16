@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Engineering Myths</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        main{
+          display :flex;
+        }
+    </style>
 </head>
 <body>
     <header></header>
@@ -13,8 +18,73 @@
         <!-- edu -->
         <section></section>
         <!-- justin -->
-        <section></section>
+        <section>
+            <style>
+                .flip-card {
+                perspective: 1000px;
+                }
+                .flip-inner {
+                transition: transform 1s;
+                transform-style: preserve-3d;
+                }
+                .flipped .flip-inner {
+                transform: rotateY(180deg);
+                }
+                .flip-front,
+                .flip-back {
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                }
+                .flip-back {
+                transform: rotateY(180deg);
+                }
+            </style>
+
+            <div id="flipCard" class="flip-card w-140 h-40 cursor-pointer p-20px shadow-lg">
+                <div class="flip-inner duration-1000 transform-3d relative w-full h-full">
+                <!-- Vorderseite -->
+                <!-- <div class="h-2/1 bg-center w-140 h-80" style="background-image: url('./front2.png');"></div> -->
+                <img class="w-full" src="./front2.png" alt="minimum">
+                <div class="flip-front transition-transform absolute  w-full h-full bg-yellow-400 shadow-lg flex text-center items-center justify-center">
+                  
+                    <p class="text-xl font-bold ">What do you call a tiny mother?</p>
+                    <div class="px-6 pt-4 pb-2">  
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                        let's see </button>
+                    </div>
+                </div>
+                <!-- Rückseite -->
+                <div class="flip-back transition-transform absolute w-full h-full bg-yellow-400 shadow-lg flex items-center justify-center text-black ">
+                    <p class="text-xl font-bold">A minimum!</p>
+                </div>
+                </div>
+            </div>
+
+            <script>
+                const card = document.getElementById('flipCard');
+                card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+                });
+            </script>
+            <!-- <section>
+                    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+                    <img class="w-full" src="./front2.png" alt="minimum">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">The Colest Question</div>
+                        <p class="text-gray-700 text-base">
+                        What do you call a tiny mother?
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Let's See</span>
+                    </div>
+                    </div>
+            </section> -->
+
+        </section>
         <!-- saeed -->
+
+
     </main>
     <footer></footer>
 </body>
