@@ -75,3 +75,10 @@ h6 {
 }
 
 /* start of styling */
+
+/* utility class for backface hidden (relevant in card flip section) */
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
