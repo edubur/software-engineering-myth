@@ -75,3 +75,31 @@ h6 {
 }
 
 /* start of styling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Saeed */
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  transform-style: preserve-3d;
+}
+
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
