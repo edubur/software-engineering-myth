@@ -142,25 +142,20 @@
       </section>
       <!-- Edu beginning -->
       <section
-        class="flex flex-col text-white py-20 gap-15 min-w-70 border-b border-cyan-500/20"
-      >
-        <div
+        class="flex flex-col md:flex-row justify-center items-center text-white py-20 gap-15 min-w-70 border-b border-cyan-500/20">
+        <div 
           class="group [perspective:1000px] w-[350px] h-[200px] self-center"
-          onclick="this.classList.toggle('flipped')"
-        >
+          onclick="this.classList.toggle('flipped')">
           <div
-            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180"
-          >
+            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180">
             <!-- Front 1-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden">
               <p>"Once we start coding, everything will fall into place."</p>
             </div>
             <!-- Back 1-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden">
               <p>
                 → Without clear requirements, confusion grows — not clarity.
               </p>
@@ -169,42 +164,34 @@
         </div>
         <div
           class="group [perspective:1000px] w-[350px] h-[200px] self-center"
-          onclick="this.classList.toggle('flipped')"
-        >
+          onclick="this.classList.toggle('flipped')">
           <div
-            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180"
-          >
+            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180">
             <!-- Front 2-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden">
               <p>"Users will figure out how it works."</p>
             </div>
             <!-- Back 2-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden">
               <p>→ Clear and intuitive UX should never be left to chance.</p>
             </div>
           </div>
         </div>
         <div
           class="group [perspective:1000px] w-[350px] h-[200px] self-center"
-          onclick="this.classList.toggle('flipped')"
-        >
+          onclick="this.classList.toggle('flipped')">
           <div
-            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180"
-          >
+            class="relative w-full h-full duration-700 [transform-style:preserve-3d] group-[.flipped]:rotate-y-180">
             <!-- Front 3-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-[#FF0032] border-5 border-[#008B8B] p-10 text-center rounded-xl backface-hidden">
               <p>"Documentation is only for beginners."</p>
             </div>
             <!-- Back 3-->
             <div
-              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden"
-            >
+              class="absolute inset-0 flex items-center justify-center bg-blue-400 border-5 border-[#008B8B] p-10 text-center rounded-xl rotate-y-180 backface-hidden">
               <p>
                 → Even experts forget details — documentation saves time and
                 effort.
@@ -214,12 +201,13 @@
         </div>
       </section>
       <!-- Saeed beginning -->
+      <div class="flex flex justify-center gap-40">
       <section class="py-20">
         <div class="flex flex-row justify-center">
           <!-- Vorderseite -->
           <div
             id="flipCard"
-            class="flip-card w-140 h-80 cursor-pointer shadow-lg"
+            class="flipCard w-140 h-80 cursor-pointer shadow-lg"
           >
             <div
               class="flip-inner h-full w-full relative transition-transform duration-1000"
@@ -266,10 +254,63 @@
           </div>
         </div>
       </section>
+      <section class="py-20">
+        <div class="flex flex-row justify-center">
+          <!-- Vorderseite -->
+          <div
+            id="flipCard"
+            class="flipCard w-140 h-80 cursor-pointer shadow-lg"
+          >
+            <div
+              class="flip-inner h-full w-full relative transition-transform duration-1000"
+            >
+              <div
+                class="flip-front absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
+              >
+                <img
+                  class="w-full h-56 object-cover rounded-t-xl"
+                  src="Images/Saeed_front_card2.png"
+                  alt="Saeed's Card Front"
+                />
+                <div
+                  class="bg-yellow-400 p-4 text-center rounded-b-xl h-24 flex flex-col justify-center items-center"
+                >
+                  <p class="text-xl font-bold text-black">
+                    What do you call a funny mountain?
+                  </p>
+                  <div class="px-6 pt-4 pb-2">
+                    <button
+                      class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    >
+                      let's see
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Rückseite -->
+              <div
+                class="flip-back absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
+              >
+                <img
+                  class="w-full h-56 object-cover rounded-t-xl"
+                  src="Images/Saeed_front_card2.png"
+                  alt="Saeed's Card Back"
+                />
+                <div
+                  class="bg-yellow-400 p-4 text-center rounded-b-xl h-24 flex flex-col justify-center items-center"
+                >
+                  <p class="text-xl font-bold text-black">Hill-arious!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
     </main>
     <footer
       role="contentinfo"
-      class="bg-[#061e26] border-t border-cyan-500/20 mt-8"
+      class="bg-[#061e26] border-t border-cyan-500/20 mt-8 flex justify-center"
     >
       <div
         class="max-w-screen-xl mx-auto py-8 flex flex-col items-center gap-8"
@@ -425,10 +466,14 @@
       });
 
       // Saeed
-      const card = document.getElementById("flipCard");
-      card.addEventListener("click", () => {
-        card.classList.toggle("flipped");
+      const cards = document.querySelectorAll('.flipCard');
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
       });
+
     </script>
   </body>
 </html>
