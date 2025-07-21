@@ -103,3 +103,58 @@ html {
 .flip-back {
   transform: rotateY(180deg);
 }
+
+/* Border */
+
+@keyframes animate-rainbow-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-border-b,
+.animated-border-t {
+  position: relative;
+}
+
+.animated-border-b::after,
+.animated-border-t::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    #84cc16,
+    #10b981,
+    #06b6d4,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #f97316,
+    #facc15,
+    #84cc16,
+    #10b981,
+    #06b6d4,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #f97316,
+    #facc15,
+    #84cc16
+  );
+  background-size: 200% 100%;
+  animation: animate-rainbow-border 20s linear infinite;
+}
+
+.animated-border-b::after {
+  bottom: 0;
+}
+
+.animated-border-t::before {
+  top: 0;
+}
