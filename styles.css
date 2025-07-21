@@ -1,109 +1,23 @@
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
-
-/* 3. Enable keyword animations */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
-body {
-  /* 4. Add accessible line-height */
-  line-height: 1.5;
-  /* 5. Improve text rendering */
-  -webkit-font-smoothing: antialiased;
-  font-family: "Fira Code", monospace;
-}
-
-/* 6. Improve media defaults */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* 7. Inherit fonts for form controls */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* 8. Avoid text overflows */
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-  font-family: "Orbitron", sans-serif;
-}
-
-/* 9. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
-
-/* start of styling */
-
 html {
   scroll-behavior: smooth;
 }
 
-/* Saeed */
-
-.flip-card {
-  perspective: 1000px;
+body {
+  font-family: "Fira Code", monospace;
 }
 
-.flip-inner {
-  transform-style: preserve-3d;
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
 }
 
-.flip-front,
-.flip-back {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+#typewriter-h1 {
+  font-family: "Orbitron", sans-serif;
 }
 
-.flipped .flip-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-back {
-  transform: rotateY(180deg);
+#myths div {
+  font-family: "Fira Code", monospace;
 }
 
 /* Border */
@@ -159,4 +73,72 @@ html {
 
 .animated-border-t::before {
   top: 0;
+}
+
+/* Typewriter hero section */
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  width: 1ch;
+  color: darkcyan;
+  font-weight: bold;
+  animation: blink-cursor 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hero section background animation */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Saeed */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-inner {
+  transform-style: preserve-3d;
+}
+
+.flip-front,
+.flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
 }

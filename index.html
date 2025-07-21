@@ -12,17 +12,15 @@
     />
   </head>
   <body id="page-top" class="bg-[#05171e]">
-    <header>
-      <nav class="bg-[#061e26] border-b border-cyan-500/20">
+    <header class="sticky top-0 z-50">
+      <nav class="bg-[#061e26] animated-border-b">
         <div class="flex justify-between items-center px-8 py-4">
           <div>
-            <a href="#">
-              <img
-                class="h-10 border border-cyan-400/50 rounded-lg filter drop-shadow-[0_3px_5px_#06b6d440]"
-                src="Images/Logo.png"
-                alt="Firmenlogo"
-              />
-            </a>
+            <img
+              class="h-10 border border-cyan-400/50 rounded-lg filter drop-shadow-[0_3px_5px_#06b6d440]"
+              src="Images/Logo.png"
+              alt="Firmenlogo"
+            />
           </div>
           <button
             id="menu-btn"
@@ -73,7 +71,7 @@
       </nav>
       <div
         id="mobile-menu"
-        class="hidden sm:hidden bg-[#061e26] text-center border-x border-b border-cyan-500/20"
+        class="hidden sm:hidden bg-[#061e26] text-center animated-border-b"
       >
         <a
           href="index.html"
@@ -93,59 +91,101 @@
       </div>
     </header>
     <main>
-      <!-- Hero Section (to be done) -->
-      <section>
-        <div
-          class="py-20 flex flex-row flex-wrap justify-center text-cyan-300 gap-12"
-        >
-          <div>
-            <p>Hero Section</p>
+      <section
+        class="animated-border-b hero-section min-h-[420px] flex flex-col justify-center"
+      >
+        <video
+          src="Images/Background.mp4"
+          autoplay
+          loop
+          muted
+          class="hero-video"
+        ></video>
+        <div class="hero-content flex flex-col">
+          <div
+            class="flex pt-20 pb-5 px-4 justify-center text-cyan-300 sm:px-[180px] sm:justify-start"
+          >
+            <h1 id="typewriter-h1" class="text-center sm:text-left text-4xl">
+              <span id="typewriter-line1"></span
+              ><span id="typewriter-cursor" class="typewriter-cursor">|</span
+              ><br />
+              <span id="typewriter-line2"></span>
+            </h1>
           </div>
+          <div
+            class="flex pb-5 px-4 justify-center text-cyan-300 sm:px-[180px] sm:justify-start"
+          >
+            <h3
+              id="hero-h3"
+              class="text-center sm:text-left opacity-0 translate-y-6 transition-all duration-700"
+            >
+              We're challenging the folklore of development, one myth at a time.
+              Let's debug the narratives that shape our industry.
+            </h3>
+          </div>
+          <div
+            class="flex mb-5 px-4 justify-center sm:px-[180px] sm:justify-start"
+          >
+            <a href="#myths">
+              <button
+                id="hero-btn"
+                class="cursor-pointer px-6 py-3 rounded-lg text-cyan-300 border border-cyan-300 hover:bg-cyan-500/10 transition-all duration-300 opacity-0 scale-95 transition-all duration-700"
+              >
+                Start investigating
+              </button>
+            </a>
+          </div>
+          <div
+            class="py-8 flex flex-row flex-wrap justify-center text-cyan-300"
+          ></div>
         </div>
       </section>
-      <!-- Justin beginning -->
-      <section id="myths" class="border-b border-cyan-500/20">
-        <div
-          class="py-20 flex flex-row flex-wrap justify-center text-cyan-300 gap-12"
-        >
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-          <div
-            class="flex justify-center items-center h-50 w-35 bg-[#061e26] rounded-xl text-center"
-          >
-            Hello World
-          </div>
-        </div>
-      </section>
-      <!-- Edu beginning -->
       <section>
-      <h2 class="relative text-center text-cyan-300 z-10 text-3xl sm:text-4xl font-bold mb-16 pt-20">
+        <div class="animated-border-b py-20 flex flex-col items-center text-cyan-300 px-4 sm:px-8 text-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-5">
+                <div class="absolute inset-0 bg-[length:15px_15px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)]"></div>
+                <div class="absolute inset-0 bg-[length:30px_30px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)] opacity-30"></div>
+            </div>
+
+            <h2 class="relative z-10 text-3xl sm:text-4xl font-bold mb-16">
+                Unraveling the Fabric of Development
+            </h2>
+
+            <div class="relative z-10 flex flex-col lg:flex-row gap-8 lg:gap-0 max-w-6xl w-full">
+                <div class="flex-1 flex flex-col items-center p-8 bg-[#061e26]/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl lg:rounded-r-none">
+                    </svg>
+                    <h3 class="font-bold text-cyan-200 mt-4 mb-4 text-2xl" style="font-family: 'Orbitron', sans-serif;">The Challenge</h3>
+                    <p class="text-lg leading-relaxed text-cyan-300/80 text-left">
+                        As the industry evolves, what was once accepted as truth can become a hindrance. Many "unwritten rules" and common pieces of advice, while seemingly logical, often lead to inefficiencies, missed deadlines, and unnecessary stress.
+                    </p>
+                </div>
+
+                <div class="hidden lg:flex flex-col items-center justify-center px-6">
+                    <div class="w-px h-full bg-gradient-to-b from-transparent via-cyan-400/80 to-transparent"></div>
+                </div>
+                <div class="flex-1 flex flex-col items-center p-8 bg-[#061e26]/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl lg:rounded-l-none">
+                    <svg class="w-12 h-12 text-cyan-400 drop-shadow-[0_0_5px_#06b6d4]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="font-bold text-cyan-200 mt-4 mb-4 text-2xl" style="font-family: 'Orbitron', sans-serif;">Our Mission</h3>
+                    <p class="text-lg leading-relaxed text-cyan-300/80 text-left">
+                        This is your guide to critically examining these beliefs. We'll expose the fallacies and help you distinguish between genuine best practices and outdated folklore, empowering you to make more informed decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+    id="myths" class="relative flex flex-col text-white gap-15 animated-border-b py-20"
+  >
+  <div class="absolute inset-0 z-0 opacity-5">
+    <div class="absolute inset-0 bg-[length:15px_15px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)]"></div>
+    <div class="absolute inset-0 bg-[length:30px_30px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)] opacity-30"></div>
+</div>
+      <h2 class="relative text-center text-cyan-300 text-3xl sm:text-4xl font-bold">
         Read. Think. Click.
        </h2>
-        <div class="flex flex-col flex-wrap md:flex-row justify-center items-center text-white py-20 gap-15 min-w-70 border-b border-cyan-500/20">
+        <div class="flex flex-col flex-wrap md:flex-row justify-center items-center text-white gap-15">
           <div 
           class="group [perspective:1000px] w-[350px] h-[200px] self-center"
           onclick="this.classList.toggle('flipped')">
@@ -443,14 +483,15 @@
         </div>
         </div>
       </section>
-      <!-- Saeed beginning -->
-      <div class="flex flex justify-center gap-40">
-      <section class="py-20">
+      <section class="relative py-20">
+        <div class="absolute inset-0 z-0 opacity-5">
+          <div class="absolute inset-0 bg-[length:15px_15px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)]"></div>
+          <div class="absolute inset-0 bg-[length:30px_30px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)] opacity-30"></div>
+      </div>
         <div class="flex flex-row justify-center">
-          <!-- Vorderseite -->
           <div
             id="flipCard"
-            class="flipCard w-140 h-80 cursor-pointer shadow-lg"
+            class="flip-card w-140 h-80 cursor-pointer shadow-lg"
           >
             <div
               class="flip-inner h-full w-full relative transition-transform duration-1000"
@@ -478,7 +519,6 @@
                   </div>
                 </div>
               </div>
-              <!-- Rückseite -->
               <div
                 class="flip-back absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
               >
@@ -497,12 +537,8 @@
           </div>
         </div>
       </section>
-      </div>
     </main>
-    <footer
-      role="contentinfo"
-      class="bg-[#061e26] border-t border-cyan-500/20 mt-8 flex justify-center"
-    >
+    <footer role="contentinfo" class="bg-[#061e26] animated-border-t mt-8">
       <div
         class="max-w-screen-xl mx-auto py-8 flex flex-col items-center gap-8"
       >
@@ -651,20 +687,96 @@
       // Menu
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
-
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
 
       // Saeed
-      const cards = document.querySelectorAll('.flipCard');
-
-      cards.forEach((card) => {
-        card.addEventListener('click', () => {
-          card.classList.toggle('flipped');
-        });
+      const card = document.getElementById("flipCard");
+      card.addEventListener("click", () => {
+        card.classList.toggle("flipped");
       });
 
+      // Typewriter effect for hero section
+      const line1 = "Myth: Unhandled";
+      const line2 = "Exception";
+      const typewriterLine1 = document.getElementById("typewriter-line1");
+      const typewriterLine2 = document.getElementById("typewriter-line2");
+      const cursor = document.getElementById("typewriter-cursor");
+      const heroH3 = document.getElementById("hero-h3");
+      const heroBtn = document.getElementById("hero-btn");
+      const heroSection = document.querySelector(".hero-section");
+
+      let i = 0;
+      let j = 0;
+
+      let finalHeight = null;
+      function lockHeroHeight() {
+        heroH3.classList.remove("opacity-0", "translate-y-6");
+        heroH3.classList.add("opacity-100", "translate-y-0");
+        heroBtn.classList.remove("opacity-0", "scale-95");
+        heroBtn.classList.add("opacity-100", "scale-100");
+        cursor.style.display = "none";
+        setTimeout(() => {
+          finalHeight = heroSection.offsetHeight;
+          heroSection.style.minHeight = finalHeight + "px";
+          heroH3.classList.add("opacity-0", "translate-y-6");
+          heroH3.classList.remove("opacity-100", "translate-y-0");
+          heroBtn.classList.add("opacity-0", "scale-95");
+          heroBtn.classList.remove("opacity-100", "scale-100");
+          cursor.style.display = "inline-block";
+        }, 50);
+      }
+
+      function unlockHeroHeight() {
+        heroSection.style.minHeight = "";
+      }
+
+      function typeLine1() {
+        if (i < line1.length) {
+          typewriterLine1.textContent += line1.charAt(i);
+          typewriterLine1.parentNode.insertBefore(
+            cursor,
+            typewriterLine1.nextSibling
+          );
+          i++;
+          setTimeout(typeLine1, 70);
+        } else {
+          typewriterLine2.parentNode.insertBefore(cursor, typewriterLine2);
+          setTimeout(typeLine2, 300);
+        }
+      }
+      function typeLine2() {
+        if (j < line2.length) {
+          typewriterLine2.textContent += line2.charAt(j);
+          typewriterLine2.parentNode.insertBefore(
+            cursor,
+            typewriterLine2.nextSibling
+          );
+          j++;
+          setTimeout(typeLine2, 70);
+        } else {
+          typewriterLine2.parentNode.insertBefore(
+            cursor,
+            typewriterLine2.nextSibling
+          );
+          cursor.style.display = "inline-block";
+          heroH3.classList.remove("opacity-0", "translate-y-6");
+          heroH3.classList.add("opacity-100", "translate-y-0");
+          setTimeout(() => {
+            heroBtn.classList.remove("opacity-0", "scale-95");
+            heroBtn.classList.add("opacity-100", "scale-100");
+          }, 200);
+          setTimeout(() => {
+            cursor.style.display = "none";
+            unlockHeroHeight();
+          }, 3000);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        lockHeroHeight();
+        setTimeout(typeLine1, 100);
+      });
     </script>
   </body>
 </html>
