@@ -483,15 +483,13 @@
         </div>
         </div>
       </section>
-      <section class="relative py-20">
-        <div class="absolute inset-0 z-0 opacity-5">
-          <div class="absolute inset-0 bg-[length:15px_15px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)]"></div>
-          <div class="absolute inset-0 bg-[length:30px_30px] bg-[radial-gradient(#06b6d4_1px,transparent_1px)] opacity-30"></div>
-      </div>
+      <div class="flex flex-wrap justify-center gap-40 ">
+      <section class="py-20">
         <div class="flex flex-row justify-center">
+          <!-- Vorderseite -->
           <div
             id="flipCard"
-            class="flip-card w-140 h-80 cursor-pointer shadow-lg"
+            class="flipCard w-140 h-80 cursor-pointer shadow-lg"
           >
             <div
               class="flip-inner h-full w-full relative transition-transform duration-1000"
@@ -519,6 +517,7 @@
                   </div>
                 </div>
               </div>
+              <!-- Rückseite -->
               <div
                 class="flip-back absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
               >
@@ -537,6 +536,59 @@
           </div>
         </div>
       </section>
+      <section class="py-20">
+        <div class="flex flex-row justify-center">
+          <!-- Vorderseite -->
+          <div
+            id="flipCard"
+            class="flipCard w-140 h-80 cursor-pointer shadow-lg"
+          >
+            <div
+              class="flip-inner h-full w-full relative transition-transform duration-1000"
+            >
+              <div
+                class="flip-front absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
+              >
+                <img
+                  class="w-full h-56 object-cover rounded-t-xl"
+                  src="Images/Saeed_front_card2.png"
+                  alt="Saeed's Card Front"
+                />
+                <div
+                  class="bg-yellow-400 p-4 text-center rounded-b-xl h-24 flex flex-col justify-center items-center"
+                >
+                  <p class="text-xl font-bold text-black">
+                    What do you call a funny mountain?
+                  </p>
+                  <div class="px-6 pt-4 pb-2">
+                    <button
+                      class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    >
+                      let's see
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Rückseite -->
+              <div
+                class="flip-back absolute inset-0 w-full h-full shadow-lg flex flex-col rounded-xl"
+              >
+                <img
+                  class="w-full h-56 object-cover rounded-t-xl"
+                  src="Images/Saeed_front_card2.png"
+                  alt="Saeed's Card Back"
+                />
+                <div
+                  class="bg-yellow-400 p-4 text-center rounded-b-xl h-24 flex flex-col justify-center items-center"
+                >
+                  <p class="text-xl font-bold text-black">Hill-arious!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
     </main>
     <footer role="contentinfo" class="bg-[#061e26] animated-border-t mt-8">
       <div
@@ -692,9 +744,12 @@
       });
 
       // Saeed
-      const card = document.getElementById("flipCard");
-      card.addEventListener("click", () => {
-        card.classList.toggle("flipped");
+      const cards = document.querySelectorAll('.flipCard');
+
+      cards.forEach((card) => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
       });
 
       // Typewriter effect for hero section
