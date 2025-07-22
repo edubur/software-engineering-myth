@@ -16,13 +16,11 @@
       <nav class="bg-[#061e26] animated-border-b">
         <div class="flex justify-between items-center px-8 py-4">
           <div>
-            <a href="#">
-              <img
-                class="h-10 border border-cyan-400/50 rounded-lg filter drop-shadow-[0_3px_5px_#06b6d440]"
-                src="Images/Logo.png"
-                alt="Firmenlogo"
-              />
-            </a>
+            <img
+              class="h-10 border border-cyan-400/50 rounded-lg filter drop-shadow-[0_3px_5px_#06b6d440]"
+              src="Images/Logo.png"
+              alt="Firmenlogo"
+            />
           </div>
           <button
             id="menu-btn"
@@ -56,7 +54,7 @@
             </li>
             <li>
               <a
-                href="index.html#myths"
+                href="#myths"
                 class="text-cyan-300 hover:text-white hover:[text-shadow:none] transition-all duration-300 font-extrabold"
                 >Myths</a
               >
@@ -73,7 +71,7 @@
       </nav>
       <div
         id="mobile-menu"
-        class="hidden sm:hidden bg-[#061e26] text-center border-x border-b border-cyan-500/20"
+        class="hidden sm:hidden bg-[#061e26] text-center animated-border-b"
       >
         <a
           href="index.html"
@@ -327,5 +325,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
